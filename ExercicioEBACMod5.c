@@ -48,7 +48,7 @@ int registro() //função responsável por cadastrar os usuários no sistema
 	printf("1 - Aluno\n");
 	printf("2 - Monitor\n");
 	printf("3 - Professor\n");
-	printf("4 - Diretor\n\n");
+	printf("4 - Diretor\n");
 	printf("Opção: ");
 	scanf("%d",&opcaoCargo);
 	
@@ -77,7 +77,7 @@ int registro() //função responsável por cadastrar os usuários no sistema
 		fprintf(file, "Cargo: Diretor\n");
 		fclose(file);
 		break;
-		
+				
 		default:
 		printf("Opção inválida!\n");
 		system("pause");
@@ -192,7 +192,8 @@ int main()
 		printf("Selecione a opção desejada:\n\n");
 		printf("\t1 - Cadastrar usuário\n");
 		printf("\t2 - Consultar usuário\n");
-		printf("\t3 - Deletar usuário\n\n");
+		printf("\t3 - Deletar usuário\n");
+		printf("\t4 - Sair do sistema\n\n");
 		printf("Opção: "); //final do menu
 	
 		scanf("%d",&opcao); //armazenando escolha do usuário
@@ -211,6 +212,11 @@ int main()
 			
 			case 3:
 			deletar();
+			break;
+			
+			case 4:
+			printf("Obrigado por utilizar o sistema!\n");
+			return 0;
 			break;
 			
 			default:
